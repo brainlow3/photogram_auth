@@ -11,13 +11,15 @@
       <dt>Last Online</dt>
       <dd><%= @user.last_sign_in_at%></dd>
 
-      <dt>Images</dt>
-      <% @photos.each do |photo| %>
-      <tr>
-        <td><img src="<%= photo.image %>"alt="<%= photo.caption %>"></td>
-      </tr>
-      <% end %>
-
     </dl>
+    <dt>Images</dt>
+    <% @photos.each do |photo| %>
+    <tr>
+      <td><img src="<%= photo.image %>"alt="<%= photo.caption %>"></td>
+      <td><%= photo.caption %></td>
+    </tr>
+    <% end %>
+
+
   </div>
 </div>
